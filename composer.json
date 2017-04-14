@@ -1,0 +1,26 @@
+{
+    "name": "kipkaev55/sxgeo",
+    "description": "Library for Sypex Geo2",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Valerii Kipkaev",
+            "email": "kipkaev@kipkaev.name"
+        },
+        {
+            "name": "Binovator",
+            "email": "info@sypex.net",
+            "homepage": "https://sypexgeo.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "SypexGeo": "src/"
+        }
+    }
+}
