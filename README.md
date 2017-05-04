@@ -30,6 +30,27 @@ You should now have the files `composer.json` and `composer.lock` as well as
 the directory `vendor` in your project directory. If you use a version control
 system, `composer.json` should be added to it.
 
+## Update database on "composer install" command ##
+------------
+Put "post-install-cmd" event to composer.json
+```json
+"scripts": {
+    "post-install-cmd": [
+        "SypexGeo\\Composer::installDatabases"
+    ],
+    "post-update-cmd": [
+        "SypexGeo\\Composer::installDatabases"
+    ]
+}
+```
+Put "extra" settings to composer.json
+```json
+"extra": {
+    "sypexgeo_remote": "https://sypexgeo.net/files/SxGeoCity_utf8.zip",
+    "sypexgeo_local": "vendor/kipkaev55/sxgeo/SxGeoCity.dat"
+}
+```
+
 ### Require Autoloader ###
 
 After installing the dependencies, you need to require the Composer autoloader
