@@ -51,9 +51,9 @@ class Reader
                 $data['country']['en'] = ($geo['country']['name_en'] == null) ? 'Unknown' : $geo['country']['name_en'];
                 $data['country']['ru'] = ($geo['country']['name_ru'] == null) ? 'Неизвестно' : $geo['country']['name_ru'];
                 $data['region']['en'] = ($geo['region']['name_en'] == null) ? 'Unknown' : $geo['region']['name_en'];
-                $data['region']['ru'] = ($geo['region']['name_ru'] == null) ? 'Unknown' : $geo['region']['name_ru'];
+                $data['region']['ru'] = ($geo['region']['name_ru'] == null) ? 'Неизвестно' : $geo['region']['name_ru'];
                 $data['city']['en'] = ($geo['city']['name_en'] == null) ? 'Unknown' : $geo['city']['name_en'];
-                $data['city']['ru'] = ($geo['city']['name_ru'] == null) ? 'Unknown' : $geo['city']['name_ru'];
+                $data['city']['ru'] = ($geo['city']['name_ru'] == null) ? 'Неизвестно' : $geo['city']['name_ru'];
             }   
         } catch (\Exception $e) {
             $data = $e->getMessage();
