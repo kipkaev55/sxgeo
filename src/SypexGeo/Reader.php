@@ -28,6 +28,9 @@ class Reader
             $SxGeo = new SxGeo($this->db);
             //$SxGeo = new SxGeo($this->db, SXGEO_BATCH | SXGEO_MEMORY); // The most productive mode, if you need to process a lot of IP at a time
             $geo = $SxGeo->getCityFull($ip);
+            if ($geo === false) {
+                throw new \LogicException('IP not found.');
+            }
             if((ip2long($ip) >= 167772160 && ip2long($ip) <= 184549375)
                 || (ip2long($ip) >= 2886729728 && ip2long($ip) <= 2887778303)
                 || (ip2long($ip) >= 3232235520 && ip2long($ip) <= 3232301055)) { //networks classes A,B,C
